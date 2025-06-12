@@ -5,13 +5,15 @@ import { useFonts } from 'expo-font'
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
-  const bgColor = colorScheme === "dark" ? "#09090a" : "#f5f5f7";
+  const bgColor = colorScheme === "dark" ? "#09090a" : "#f5f5ff";
   const fontColor = colorScheme === "dark" ? "#f5f5ff" : "#09090a";
 
+  const fontMap: Record<string, any> = {
+    Poppins: require("../assets/fonts/Poppins-Bold.ttf"),
+  }
 
-  const [loaded, error] = useFonts({
-    'SpaceMono': require('../assets/fonts/Poppins-Regular.ttf'),
-  });
+
+  const [loaded, error] = useFonts(fontMap);
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>

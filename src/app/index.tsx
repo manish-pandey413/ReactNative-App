@@ -1,13 +1,14 @@
-import { StatusBar, StyleSheet, useColorScheme, View } from "react-native";
+import { StatusBar, StyleSheet, View } from "react-native";
 import Drawer from "expo-router/drawer";
 import AntDesign from '@expo/vector-icons/AntDesign';
+import useColorMode from "../hooks/useColorMode";
+import type { StatusBarStyle } from "react-native";
 
 export default function Index() {
-  const colorScheme = useColorScheme();
 
-  const bgColor = colorScheme === "dark" ? "#09090a" : "#f5f5ff";
-  const statusTheme = colorScheme === "dark" ? "light-content" : "dark-content";
-  const fontColor = colorScheme === "dark" ? "#f5f5f9" : "#09090a";
+  const bgColor = useColorMode("#09090a", "#f5f5ff");
+  const statusTheme = useColorMode("light-content", "dark-content") as StatusBarStyle;
+  const fontColor = useColorMode("#f5f5f9", "#09090a");
 
   const user = "Guest";
 
@@ -28,6 +29,7 @@ export default function Index() {
         }}
       />
       <StatusBar barStyle={statusTheme} />
+      <AntDesign style={{ position: "absolute", right: 30, bottom: 40 }} name="pluscircle" size={55} color={"#00db9d"} />
     </View >
   );
 }
@@ -38,5 +40,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  }
+  },
 });
