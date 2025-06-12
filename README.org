@@ -10,20 +10,17 @@ This is an [[https://expo.dev][Expo]] project created with [[https://www.npmjs.c
 
 ** Project Structure
 #+BEGIN_SRC bash
-src
-├── app
-│   ├── account
-│   │   └── index.tsx
-│   ├── bookmarks
-│   │   └── index.tsx
-│   ├── index.tsx
-│   ├── _layout.tsx
-│   └── settings
-│       └── index.tsx
-├── assets
-│   ├── fonts
-│   └── images
-└── components
+ /src
+├──  app
+│   ├──  _layout.tsx
+│   ├──  account
+│   ├──  bookmarks
+│   ├──  index.tsx
+│   └──  settings
+├──  assets
+│   ├──  fonts
+│   └──  images
+└──  components
 #+END_SRC
 
 ** Get started
