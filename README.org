@@ -9,6 +9,7 @@ This is an [[https://expo.dev][Expo]] project created with [[https://www.npmjs.c
   - [[#resources][Resources]]
 
 ** Project Structure
+#+BEGIN_SRC bash
 src
 ├── app
 │   ├── account
@@ -23,12 +24,14 @@ src
 │   ├── fonts
 │   └── images
 └── components
+#+END_SRC
 
 ** Get started
 *** Clone the repository
 #+BEGIN_SRC bash
 git clone https://https://github.com/manish-pandey413/ReactNative-App
 cd ReactNative-App
+#+END_SRC
 *** Install dependencies
    #+BEGIN_SRC bash
    npm install
