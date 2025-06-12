@@ -9,16 +9,20 @@ This is an [[https://expo.dev][Expo]] project created with [[https://www.npmjs.c
   - [[#resources][Resources]]
 
 ** Project Structure
-*** src
-**** App
-Contains all the screens, pages.
-**** Assets
-***** Fonts
-Fonts used in the application are statically loaded using TTF or OTF files.
-***** Images
-Images used are stored here.
-**** Components
-All the react component which are used are created and stored here.
+src
+├── app
+│   ├── account
+│   │   └── index.tsx
+│   ├── bookmarks
+│   │   └── index.tsx
+│   ├── index.tsx
+│   ├── _layout.tsx
+│   └── settings
+│       └── index.tsx
+├── assets
+│   ├── fonts
+│   └── images
+└── components
 
 ** Get started
 *** Clone the repository
