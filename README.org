@@ -10,7 +10,7 @@ This is an [[https://expo.dev][Expo]] project created with [[https://www.npmjs.c
 
 ** Project Structure
 #+BEGIN_SRC bash
- /src
+ src
 ├──  app
 │   ├──  _layout.tsx
 │   ├──  account
@@ -20,7 +20,9 @@ This is an [[https://expo.dev][Expo]] project created with [[https://www.npmjs.c
 ├──  assets
 │   ├──  fonts
 │   └──  images
-└──  components
+├──  components
+└──  hooks
+    └──  useColorMode.tsx
 #+END_SRC
 
 ** Get started
