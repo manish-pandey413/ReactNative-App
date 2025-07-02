@@ -1,19 +1,20 @@
 import { Drawer } from 'expo-router/drawer'
-import { useColorScheme, useWindowDimensions } from 'react-native';
+import { useWindowDimensions } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { useFonts } from 'expo-font'
+import useColorMode from '../hooks/useColorMode';
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const bgColor = colorScheme === "dark" ? "#09090a" : "#f5f5ff";
-  const fontColor = colorScheme === "dark" ? "#f5f5ff" : "#09090a";
+  const dimensions = useWindowDimensions();
+
+  const drawerBg = useColorMode("#09090a", "#f5f5ff");
+  const fontColor = useColorMode("#f5f5ff", "#09090a");
 
   const fontMap: Record<string, any> = {
-    Poppins: require("../assets/fonts/Poppins-Bold.ttf"),
+    Poppins: require("../assets/fonts/Poppins/Poppins-Bold.ttf"),
   }
 
-
-  const [loaded, error] = useFonts(fontMap);
+  useFonts(fontMap);
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -23,11 +24,11 @@ export default function RootLayout() {
           swipeEdgeWidth: 400,
           lazy: false,
           drawerStyle: {
-            paddingTop: useWindowDimensions().height / 4,
+            paddingTop: dimensions.height / 4,
             width: 250,
-            backgroundColor: bgColor,
+            backgroundColor: drawerBg,
           },
-          drawerType: useWindowDimensions().width >= 760 ? "permanent" : "front",
+          drawerType: dimensions.width >= 760 ? "permanent" : "front",
           headerTintColor: fontColor,
           headerTitleStyle: {
             fontFamily: "Poppins",
@@ -40,8 +41,8 @@ export default function RootLayout() {
             height: 52,
             paddingLeft: 5,
           },
-          drawerActiveBackgroundColor: bgColor,
           drawerActiveTintColor: '#00db9d',
+          drawerActiveBackgroundColor: "transparent",
           drawerInactiveTintColor: fontColor
         }}
       />
