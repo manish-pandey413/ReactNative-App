@@ -29,7 +29,7 @@ export default function Index() {
           headerTitleStyle: {
             fontSize: 24,
           },
-          drawerIcon: () => <AntDesign name="home" size={30} color={fontColor} paddingRight={2} />
+          drawerIcon: () => <AntDesign name="home" size={30} color={fontColor} />
         }}
       />
       <StatusBar barStyle={statusTheme} />

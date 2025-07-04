@@ -43,7 +43,7 @@ export default function RootLayout() {
           },
           drawerActiveTintColor: '#00db9d',
           drawerActiveBackgroundColor: "transparent",
-          drawerInactiveTintColor: fontColor
+          drawerInactiveTintColor: fontColor,
         }}
       />
     </GestureHandlerRootView>
