@@ -13,16 +13,14 @@ This is an [[https://expo.dev][Expo]] project created with [[https://www.npmjs.c
  src
 ├──  app
 │   ├──  _layout.tsx
-│   ├──  account
 │   ├──  bookmarks
 │   ├──  index.tsx
 │   └──  settings
 ├──  assets
 │   ├──  fonts
 │   └──  images
-├──  components
+├──  components
 └──  hooks
-    └──  useColorMode.tsx
 #+END_SRC
 
 ** Get started
