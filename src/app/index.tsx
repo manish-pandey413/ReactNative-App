@@ -128,7 +128,7 @@ export default function Index() {
         renderItem={({ item }) => (
           <TouchableOpacity style={styles.item}>
             <Text style={styles.title}>{item.itemName}</Text>
-            <Text style={styles.title}>{item.price}</Text>
+            <Text style={styles.price}>{`$ ${item.price} /-`}</Text>
           </TouchableOpacity>
         )}
         renderSectionHeader={({ section: { title } }) => (
@@ -172,6 +172,12 @@ const styles = StyleSheet.create({
     fontSize: 21
     , flex: 1
     , flexDirection: 'row'
+    , color: '#f5f5ff'
+  },
+  price: {
+    fontSize: 21
+    , paddingRight: 10
+    , justifyContent: 'flex-end'
     , color: '#f5f5ff'
   },
 
