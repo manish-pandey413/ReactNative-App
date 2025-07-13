@@ -1,7 +1,6 @@
 import { useGoHome } from "@/src/hooks/useGoHome";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import Ionicons from "@expo/vector-icons/Ionicons";
 import Drawer from "expo-router/drawer";
+import { BookMarked, StepBack } from "lucide-react-native";
 import { View, Text, StyleSheet, useColorScheme } from "react-native";
 
 export default function Settings() {
@@ -19,9 +18,9 @@ export default function Settings() {
           },
           drawerLabel: 'Bookmarks',
           title: 'Bookmarks',
-          drawerIcon: () => <FontAwesome name="bookmark-o" size={30} color={fontColor} paddingLeft={5} paddingRight={5} />,
+          drawerIcon: () => <BookMarked size={32} color={fontColor} strokeWidth={2} />,
           swipeEnabled: false,
-          headerLeft: () => <Ionicons.Button name="arrow-back" size={30} color={fontColor} backgroundColor={bgColor} iconStyle={{ marginRight: -2, marginLeft: 10 }} onPress={goHome} underlayColor="transparent" />,
+          headerLeft: () => <StepBack size={30} color={fontColor} onPress={goHome} style={{ marginLeft: 15, marginRight: 5 }} />,
         }}
       />
       <Text style={{ color: fontColor }}>Bookmarks Page</Text>
